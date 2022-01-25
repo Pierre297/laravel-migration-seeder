@@ -15,6 +15,13 @@ class CreateAlbumsTable extends Migration
     {
         Schema::create('albums_', function (Blueprint $table) {
             $table->id();
+            $table->integer('album_id');
+            $table->string('album_name');
+            $table->date('released_date');
+            $table->string('contract');
+            $table->string('license');
+            $table->string('song');
+            $table->string('artist');
             $table->timestamps();
         });
     }
