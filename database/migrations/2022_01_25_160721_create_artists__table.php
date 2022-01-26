@@ -13,12 +13,9 @@ class CreateArtistsTable extends Migration
      */
     public function up()
     {
-        Schema::create('artists_', function (Blueprint $table) {
+        Schema::create('artists', function (Blueprint $table) {
             $table->id();
-            $table->integer('artist_id');
-            // nome band o nome d'arte
             $table->string('name');
-            $table->integer('monthly_plays');
             $table->string('description');
             $table->date('tour_dates');
             $table->string('merch');
@@ -33,6 +30,6 @@ class CreateArtistsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artists_');
+        Schema::dropIfExists('artists');
     }
 }

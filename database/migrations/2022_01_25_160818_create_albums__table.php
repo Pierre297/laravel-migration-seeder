@@ -13,15 +13,11 @@ class CreateAlbumsTable extends Migration
      */
     public function up()
     {
-        Schema::create('albums_', function (Blueprint $table) {
+        Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->integer('album_id');
-            $table->string('album_name');
-            $table->date('released_date');
+            $table->string('title');
+            $table->date('release');
             $table->string('contract');
-            $table->string('license');
-            $table->string('song');
-            $table->string('artist');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ class CreateAlbumsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albums_');
+        Schema::dropIfExists('albums');
     }
 }
